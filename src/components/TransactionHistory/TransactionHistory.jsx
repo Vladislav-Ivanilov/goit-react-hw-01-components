@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import TransactionHistoryItem from './TransactionHistoryItem';
-
 import { Table, TableHeader } from './TransactionHistory.styled';
 
 export default function TransactionHistory({ transaction }) {
