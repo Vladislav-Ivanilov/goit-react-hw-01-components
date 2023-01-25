@@ -3,10 +3,11 @@ import StatisticsList from './StatisticsList';
 
 import { Section, Title, List } from './Statistics.styled';
 
-export default function Statistics({ statistics }) {
+export default function Statistics({ statistics, title }) {
+  console.log(undefined && title);
   return (
     <Section>
-      <Title>Upload stats</Title>
+      {title && <Title>{title}</Title>}
 
       <List>
         {statistics.map(({ id, label, percentage }) => {

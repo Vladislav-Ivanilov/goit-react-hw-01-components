@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import FriendItem from '../FriendList/FriendItem';
+import FriendListItem from './FriendListItem';
 import { List } from './Friend.styled';
 
 export default function FriendList({ userList }) {
@@ -7,7 +7,12 @@ export default function FriendList({ userList }) {
     <List className="friend__list">
       {userList.map(({ id, avatar, name, isOnline }) => {
         return (
-          <FriendItem key={id} image={avatar} name={name} status={isOnline} />
+          <FriendListItem
+            key={id}
+            image={avatar}
+            name={name}
+            status={isOnline}
+          />
         );
       })}
     </List>
